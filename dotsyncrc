@@ -8,7 +8,7 @@
 #
 
 # Location of your dotfiles in $HOME
-# DOTFILES=.dotfiles
+DOTFILES=.dotphiles
 
 # dotfiles to symlink
 #
@@ -21,14 +21,18 @@ dotsyncrc
 #ack/ackrc
 #aptitude
 #bin:bin
+bash/bashrc:.bashrc
+# bash/bash_profile:.bash_profile
+bash/PROMPT_COMMAND:.config/bash/PROMPT_COMMAND
 #ctags/ctags
 #cmus
 #curl/curlrc
-#git/gitconfig
+git/gitconfig
 #git/gitignore
 #git/gitattributes
 #git/tigrc
 #git/gitk
+git/git.alias:.config/shell/alias.d/git
 #gnupg
 #grc
 #input/editrc
@@ -57,6 +61,10 @@ dotsyncrc
 #screen/screenrc
 #shell/hushlogin
 #shell/urlview
+shell/profile
+shell/alias.d:.config/shell/alias.d
+shell/export.d:.config/shell/export.d
+shell/PATH.d:.config/shell/PATH.d
 #ssh
 #subversion
 #task/task
@@ -79,8 +87,8 @@ dotsyncrc
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-#host1.example.com               git=ANY                        files=custom/dotfile    #git repo, pull from anywhere and link a custom dotfile
-#host2.example.com               git=ANY                                                #git repo, pull from anywhere
+lnx-nateg         git=ANY          files=
+vaddio-pcc-premier-00-1E-C0-8D-AC-C8  rsync=lnx-nateg  files=
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
 #host4.example.com               git=host5.example.com                                  #git repo, pull from host5
 #host5.example.com               git=NONE                                               #git repo, local only
