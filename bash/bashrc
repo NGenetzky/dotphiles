@@ -23,7 +23,6 @@ source_file_safe(){
 # Generic Shell
 #
 source_dir_safe "$HOME/.config/shell/alias.d/"
-source_dir_safe "$HOME/.config/shell/export.d/"
 #
 ################################################################################
 
