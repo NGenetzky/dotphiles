@@ -1,0 +1,5 @@
+
+file=~/.profile
+if [ -f "${file}" ]; then
+    source "$file"
+fi

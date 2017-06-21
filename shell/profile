@@ -1,0 +1,56 @@
+
+################################################################################
+# Functions
+#
+
+source_dir_safe() {
+    local dir=$1
+    if [ -d "${dir}" ]; then
+        for file in ${dir}/*; do
+            source "$file"
+        done
+    fi
+}
+source_file_safe(){
+    local file=$1
+    if [ -f "${file}" ]; then
+        source "$file"
+    fi
+}
+
+pathadd() {
+    pathrm "$1"
+    if [ -d "$1" ] && ! echo $PATH | grep -E -q "(^|:)$1($|:)" ; then
+        if [ "$2" = "after" ] ; then
+            PATH="$PATH:${1%/}"
+        else
+            PATH="${1%/}:$PATH"
+        fi
+    # else
+        # echo "Excluding $1 from PATH"
+    fi
+}
+pathrm() {
+    PATH="$(echo $PATH | sed -e "s;\(^\|:\)${1%/}\(:\|\$\);\1\2;g" -e 's;^:\|:$;;g' -e 's;::;:;g')"
+}
+
+#
+################################################################################
+
+# if running bash
+if [ -n "$BASH_VERSION" ]; then
+    # include .bashrc if it exists
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
+
+################################################################################
+# Generic Shell
+#
+source_dir_safe "$HOME/.config/shell/export.d/"
+source_dir_safe "$HOME/.config/shell/PATH.d/"
+export PATH
+#
+################################################################################
+
