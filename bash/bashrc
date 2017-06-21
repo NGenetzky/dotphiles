@@ -1,0 +1,37 @@
+
+################################################################################
+# Functions
+#
+source_dir_safe() {
+    local dir=$1
+    if [ -d "${dir}" ]; then
+        for file in ${dir}/*; do
+            source "$file"
+        done
+    fi
+}
+source_file_safe(){
+    local file=$1
+    if [ -f "${file}" ]; then
+        source "$file"
+    fi
+}
+#
+################################################################################
+
+################################################################################
+# Generic Shell
+#
+source_dir_safe "$HOME/.config/shell/alias.d/"
+source_dir_safe "$HOME/.config/shell/export.d/"
+#
+################################################################################
+
+################################################################################
+# Bash Specific
+#
+source_dir_safe "$HOME/.config/bash/bashrc.d/"
+source_file_safe "$HOME/.config/bash/PROMPT_COMMAND"
+#
+################################################################################
+
