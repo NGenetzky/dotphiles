@@ -1,0 +1,58 @@
+[core]
+	safecrlf = false
+	autocrlf = input
+	editor = vim
+	pager = less -FXRS -x4
+	excludesfile = ~/.gitignore.global
+	whitespace = trailing-space,tab-in-indent
+[gc]
+	reflogExpire = 14 days
+	reflogExpireUnreachable = 30 days
+[color]
+	status = auto
+	ui = auto
+    diff = auto
+[gui]
+	commitmsgwidth = 100
+[push]
+	default = upstream
+[fetch]
+	recurseSubmodules = true
+	prune = true
+[status]
+	submodulesummary = true
+[alias]
+	exec = "!exec "
+	co = checkout
+	sw = checkout
+	ci = commit
+	amend = commit --amend
+	st = status
+	sts = status -s
+	stsi = status -s --ignored
+	br = branch
+	nb = checkout -b
+	mrg = merge --no-ff --edit
+	com = checkout master
+	sm = submodule
+	ff = merge --ff-only 
+	k = "!exec gitk --all --date-order &"
+	kf = "!exec gitk --all --first-parent &"
+	g = "!exec git gui &"
+	revert = checkout --
+	subup = submodule update --init
+	rl = "reflog"
+	sv = "stash save"
+	undo = "reset --soft HEAD~1"
+    grc = git rebase --continue
+	gl = log --graph --oneline --date-order --decorate=short
+	gla = log --graph --oneline --date-order --decorate=short --all
+	gld = log --graph --oneline --date-order --decorate=short
+	glad = log --graph --oneline --date-order --decorate=short --all
+	glaf = log --graph --oneline --decorate=short --all --first-parent
+[credential]
+	helper = cache
+[github]
+	user = ngenetzky
+[include]
+	path = ~/.gitconfig.local
