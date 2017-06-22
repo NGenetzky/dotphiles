@@ -1,0 +1,66 @@
+
+" Modeline and Notes {
+" vim: set sw=4 ts=4 sts=4 et tw=78 foldmarker={,} foldlevel=0 foldmethod=marker:
+" 1. Vundle boilerplate
+" 2. Source the vimrc.bundle.fork and vimrc.bundle.local files.
+" }
+
+" Setup Bundle Support {
+    set nocompatible              " be iMproved, required
+    filetype off                  " required
+
+    " The next three lines ensure that the ~/.vim/bundle/ system works
+    filetype off
+    set rtp+=~/.vim/bundle/vundle
+    call vundle#rc()
+" }
+
+" Add an UnBundle command {
+function! UnBundle(arg, ...)
+    let bundle = vundle#config#init_bundle(a:arg, a:000)
+    call filter(g:vundle#bundles, 'v:val["name_spec"] != "' . a:arg . '"')
+endfunction
+
+com! -nargs=+         UnBundle
+\ call UnBundle(<args>)
+" }
+
+" Vundle begin {
+" call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/.vim/bundle') 
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" }
+" Keep Plugin commands between vundle#begin/end.
+
+"{ --- Plugins ---
+
+for f in split(glob('~/.config/vim/vimrc.vundle.d/*.vim'), '\n')
+    exe 'source' f
+endfor
+
+" }
+
+" All of your Plugins must be added before the following line
+" Vundle end {
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"}
+
+" { Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" }
+
+
