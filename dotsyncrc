@@ -27,12 +27,15 @@ bash/PROMPT_COMMAND:.config/bash/PROMPT_COMMAND
 #ctags/ctags
 #cmus
 #curl/curlrc
+
+# git
 git/gitconfig
 #git/gitignore
 #git/gitattributes
 #git/tigrc
 #git/gitk
 git/git.alias:.config/shell/alias.d/git
+
 #gnupg
 #grc
 #input/editrc
@@ -71,9 +74,15 @@ shell/PATH.d:.config/shell/PATH.d
 #task/taskrc
 #tmux/tmux.conf
 #tmux/tmuxinator
-#vim/dotvim:.vim
-#vim/vimrc
-#vim/gvimrc
+
+# dotvim
+vim/dotvim/dotvim.vim:.vim/dotvim.vim
+vim/dotvim/vundles.vim:.vim/vundles.vim
+
+# vim
+vim/vimrc:.vim/vimrc
+vim/gvimrc:.vim/gvimrc
+
 #wget/wgetrc
 #zsh/fasdrc
 #zsh/dotzsh:.zsh
