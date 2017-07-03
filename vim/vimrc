@@ -1,28 +1,35 @@
-"
-" dotphiles : https://github.com/dotphiles/dotphiles
-"
-" Setup vim and load required plugins before dotvim
-"
-" Authors:
-"   Ben O'Hara <bohara@gmail.com>
-"
 
-" Call dotvim
-source ~/.vim/dotvim.vim
+"{ vimrc
 
-if has("user_commands")
-  set nocompatible
-  filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  "let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
-  let g:vundles=['general', 'programming']
-  let g:neocomplcache_enable_at_startup = 1
-  " Load 'vundles'
-  source ~/.vim/vundles.vim
-  " Add extra bundles here...
-  " Bundle 'reponame'
+" Use :scriptnames to see order they were sourced.
+for f in split(glob('~/.config/vim/vimrc.d/*.vim'), '\n')
+    exe 'source' f
+endfor
+
+"}
+
+"{ vundle
+
+"{ vundle - dotvim
+"let g:vundles=['general', 'git', 'hg', 'programming', 'completion', 'ruby', 'python', 'misc']
+let g:vundles=['general', 'programming']
+let g:neocomplcache_enable_at_startup = 1
+"}
+
+"{ vundle - spf13
+" let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming',
+"             \ 'php', 'ruby', 'python', 'go', 'twig', 'javascript',
+"             \ 'haskell', 'html', 'misc', 'scala', 'snipmate',
+"             \ 'youcompleteme', 'neocomplete']
+" My more limited list
+let g:spf13_bundle_groups=['general', 'neocomplcache', 'programming',
+    \   'python', 'misc', 'snipmate', 'youcompleteme', 'neocomplete']
+"}
+
+if filereadable(expand("~/.config/vim/vimrc.vundle"))
+    source ~/.config/vim/vimrc.vundle
 endif
 
-" Customize to your needs...
+"}
+
 
