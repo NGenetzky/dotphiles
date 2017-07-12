@@ -141,7 +141,9 @@
     rem = remote rename
 
 [push]
-    default = matching
+    # matching is dangerous.
+    # default = matching
+    default = current
 
 [url "git@github.com:"]
     insteadof = github:
