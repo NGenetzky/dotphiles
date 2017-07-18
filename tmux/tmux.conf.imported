@@ -2,7 +2,8 @@
 #set -g default-command "login-shell"
 set -g default-command "bash -l"
 # tmux display things in 256 colors
-set -g default-terminal "tmux-256color-italic"
+# set -g default-terminal "tmux-256color-italic"
+set -g default-terminal "xterm"
 # set -g status-utf8 on
 
 set -g history-limit 20000
@@ -108,4 +109,4 @@ bind -n C-l if-shell "$is_vim" "send-keys C-l" "select-pane -R"
 ### Color & Style Settings ###
 ##############################
 
-source $DOTFILES/tmux/tmux_theme.conf
+source ~/.config/tmux/tmux_theme.conf

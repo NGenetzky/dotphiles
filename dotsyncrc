@@ -72,7 +72,12 @@ shell/PATH.d:.config/shell/PATH.d
 #subversion
 #task/task
 #task/taskrc
-#tmux/tmux.conf
+
+# tmux
+tmux/tmux.conf:.tmux.conf
+# tmux/tmux.conf.imported:.tmux.conf
+tmux/tmux_theme.conf:.config/tmux/tmux_theme.conf
+
 #tmux/tmuxinator
 
 # dotvim
