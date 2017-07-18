@@ -7,7 +7,9 @@
 
 # Install the Required Software
 export REPO_PATH=~/Git/vng/
-export METAVADDIO_URI=meta-milestone
+
+# export METAVADDIO_URI=meta-milestone
+export METAVADDIO_URI=meta-vaddio
 
 # Set up the Environment
 export VAD_SCM_REPO=git@bitbucket.org/vaddio/vaddio_ngenetzky-vng.git
@@ -22,4 +24,7 @@ export D_USB0=/dev/ttyUSB0
 export D_USB1=/dev/ttyUSB1
 export IP_PLUTUS=10.30.208.1
 export IP_CENTAUR=10.30.208.2
+
+export USER_JENKINS="nateg"
+export URL_JENKINS_BUILDS="http://jenkins.vaddio.com/jenkins/user/nateg/builds"
 
