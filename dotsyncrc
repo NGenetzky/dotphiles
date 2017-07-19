@@ -34,7 +34,6 @@ git/gitconfig
 #git/gitattributes
 #git/tigrc
 #git/gitk
-git/git.alias:.config/shell/alias.d/git
 
 #gnupg
 #grc
@@ -81,12 +80,21 @@ tmux/tmux_theme.conf:.config/tmux/tmux_theme.conf
 #tmux/tmuxinator
 
 # dotvim
-vim/dotvim/dotvim.vim:.vim/dotvim.vim
-vim/dotvim/vundles.vim:.vim/vundles.vim
+vim/dotvim/dotvim.vim:.config/vim/vimrc.d/dotvim.vim
+vim/dotvim/vundles.vim:.config/vim/vimrc.vundle.d/dotvim.vim
+# dotvim -> ~/.vim/plugin/
+vim/dotvim/plugin/settings/airline.vim:.vim/plugin/airline.vim
+vim/dotvim/plugin/settings/neocomplcache.vim:.vim/plugin/neocomplcache.vim
+vim/dotvim/plugin/settings/neosnippet.vim:.vim/plugin/neosnippet.vim
 
 # vim
-vim/vimrc:.vim/vimrc
-vim/gvimrc:.vim/gvimrc
+vim/vimrc:.vimrc
+vim/gvimrc:.gvimrc
+vim/vimrc.vundle:.config/vim/vimrc.vundle
+
+vim/ngenetzky/ngenetzky.vundle.vim:.config/vim/vimrc.vundle.d/ngenetzky.vim
+vim/spf13/spf13.vundle.vim:.config/vim/vimrc.vundle.d/spf13.vim
+vim/dotvim/vundles.vim:.config/vim/vimrc.vundle.d/dotvim.vim
 
 #wget/wgetrc
 #zsh/fasdrc

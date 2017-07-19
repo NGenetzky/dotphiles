@@ -39,6 +39,12 @@
     " comment stuff out
     " Bundle 'tpope/vim-commentary'
 
+    " AnsiEsc.vim : ansi escape sequences concealed, but highlighted as specified (conceal)
+    Plugin 'AnsiEsc.vim'
+
+    " Fugitive extension to manage and merge Git branches http://www.vim.org/scripts/script.php…
+    Bundle 'idanarye/vim-merginal'
+
     "" speeddating.vim: use CTRL-A/CTRL-X to increment dates, times, and more
     Bundle 'tpope/vim-speeddating'
 
@@ -192,6 +198,8 @@ Bundle 'Shougo/neoyank.vim'
 Bundle 'Shougo/vimproc.vim'
 Bundle 'Shougo/neomru.vim'
 Bundle 'Shougo/unite-outline'
+Bundle 'Shougo/unite-ssh'
+Bundle 'Shougo/vimfiler'
 Bundle 'Shougo/unite.vim'
 
 " The Most Recently Used (MRU) plugin provides an easy access to a list of
@@ -463,4 +471,5 @@ if filereadable(expand("~/.vim/vimrc.bundles.spf13")) && !exists("g:override_spf
     UnBundle 'saltstack/salt-vim'
 " }
 endif
+
 
