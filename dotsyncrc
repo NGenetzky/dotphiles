@@ -79,17 +79,20 @@ tmux/tmux_theme.conf:.config/tmux/tmux_theme.conf
 
 #tmux/tmuxinator
 
-# vim
+# ./vim
 vim/vimrc:.vimrc
 vim/gvimrc:.gvimrc
 
-# dotvim
+# ./vim/dotvim
 vim/dotvim/dotvim.vim:.vim/dotvim.vim
 vim/dotvim/vundles.vim:.vim/vundles.vim
 # dotvim -> ~/.vim/plugin/
 vim/dotvim/plugin/settings/airline.vim:.vim/plugin/airline.vim
 vim/dotvim/plugin/settings/neocomplcache.vim:.vim/plugin/neocomplcache.vim
 vim/dotvim/plugin/settings/neosnippet.vim:.vim/plugin/neosnippet.vim
+
+# ./vim/ngenetzky
+vim/ngenetzky/ngenetzky.vundles.vim:.vim/ngenetzky.vundles.vim
 
 #wget/wgetrc
 #zsh/fasdrc

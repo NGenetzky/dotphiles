@@ -15,17 +15,22 @@ let g:vundles=['general']
 let g:vundles+=['airline']
 let g:vundles+=['git']
 let g:vundles+=['programming']
-let g:vundles+=['misc']
+" let g:vundles+=['misc']
 
 if has("user_commands")
   set nocompatible
   filetype off
   set rtp+=~/.vim/bundle/vundle/
   call vundle#rc()
+
   " Load 'vundles'
   source ~/.vim/vundles.vim
   " Add extra bundles here...
-  " Bundle 'reponame'
+
+    "if filereadable("$HOME/.vim/ngenetzky.vundles.vim")
+        source $HOME/.vim/ngenetzky.vundles.vim
+    "endif
+
 endif
 
 " Customize to your needs...
