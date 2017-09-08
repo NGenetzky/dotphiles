@@ -128,7 +128,7 @@
             " Bundle 'godlygeek/tabular'
             Bundle 'luochen1990/rainbow'
             if executable('ctags')
-                Bundle 'majutsushi/tagbar'
+                " Bundle 'majutsushi/tagbar'
             endif
         endif
     " }

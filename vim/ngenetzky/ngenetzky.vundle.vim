@@ -95,7 +95,7 @@ if executable("ctags")
 endif
 
 " Shows the current tag structure in a pane.
-Bundle 'majutsushi/tagbar'
+" Bundle 'majutsushi/tagbar'
 
 " Vim plugin for c/c++ developers and Vim lovers
 " Bundle 'bbchung/clighter8'
@@ -141,7 +141,7 @@ Bundle 'rhysd/vim-clang-format'
 " }
 
 " Geeknote {
-Bundle 'neilagabriel/vim-geeknote'
+" Bundle 'neilagabriel/vim-geeknote'
 " }
 
 " }

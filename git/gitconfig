@@ -51,6 +51,7 @@
 [core]
     pager = less -FRSX
     whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    editor = vim
 
 [diff]
     tool = vimdiff
@@ -150,3 +151,7 @@
 
 [include]
 	path = ~/.config/git/gitconfig.local
+
+[user]
+    email = 'nathan@genetzky.us'
+    user = 'ngenetzky'

@@ -109,8 +109,9 @@ vim/dotvim/vundles.vim:.config/vim/vimrc.vundle.d/dotvim.vim
 # Hosts to sync
 ## hostname                     type=masterhost, ANY or NONE    files=dotfile:tolink,another:tolink
 [hosts]
-lnx-nateg         git=ANY          files=
+lnx-nateg git=ANY files=
 vaddio-pcc-premier-00-1E-C0-8D-AC-C8  rsync=lnx-nateg  files=
+ngenetzky-ultra git=ANY-nateg  files=
 #host3.example.com               git=ANY                                                #git repo, pull from anywhere
 #host4.example.com               git=host5.example.com                                  #git repo, pull from host5
 #host5.example.com               git=NONE                                               #git repo, local only
